@@ -70,3 +70,72 @@ for (let i = 0, len = revealDelayElements.length; i < len; i++) {
 
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
+
+
+
+
+
+
+
+
+
+
+
+ // Disable right-clicking on the entire document
+// document.addEventListener("contextmenu", function(event) {
+//   event.preventDefault();
+// });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Show the custom context menu on right-click
+  document.addEventListener("contextmenu", function(event) {
+      event.preventDefault(); // Prevent the default context menu
+      showContextMenu(event.clientX, event.clientY);
+  });
+
+  // Hide the custom context menu when clicking outside
+  document.addEventListener("click", function() {
+      hideContextMenu();
+  });
+
+  // Function to show the custom context menu
+  function showContextMenu(x, y) {
+      var contextMenu = document.getElementById("context-menu");
+      contextMenu.style.display = "block";
+      contextMenu.style.left = x + "px";
+      contextMenu.style.top = y + "px";
+  }
+
+  // Function to hide the custom context menu
+  function hideContextMenu() {
+      var contextMenu = document.getElementById("context-menu");
+      contextMenu.style.display = "none";
+  }
+
+  // Event listeners for each context menu item
+  document.getElementById("select").addEventListener("click", function() {
+      // Add functionality for "Select" option here
+    
+      hideContextMenu();
+  });
+
+  document.getElementById("copy").addEventListener("click", function() {
+      // Add functionality for "Copy" option here
+    
+      hideContextMenu();
+  });
+
+  document.getElementById("follow-instagram").addEventListener("click", function() {
+      // Add functionality for "Follow me on Instagram" option here
+      
+      hideContextMenu();
+  });
+
+  document.getElementById("inspect").addEventListener("click", function() {
+    // Add functionality for "Select" option here
+    alert("Permission denied 🙃");
+    hideContextMenu();
+  });
+});
