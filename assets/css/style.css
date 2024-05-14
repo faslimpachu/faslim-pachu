@@ -1,18 +1,4 @@
-/*-----------------------------------*\
-  #main.css
-\*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -196,10 +182,10 @@ body.nav-active { overflow: hidden; }
 .h4 { font-size: var(--fs-4); }
 
 .btn {
-  color: var(--cinnamon-satin);
+  color: var(--raisin-black);
   font-size: var(--fs-6);
   font-weight: var(--fw-700);
-  border: 2px solid var(--cinnamon-satin);
+  border: 2px solid var(--raisin-black);
   max-width: max-content;
   padding: 12px 28px;
   border-radius: var(--radius-pill);
@@ -211,7 +197,7 @@ body.nav-active { overflow: hidden; }
 
 .btn-primary,
 .btn-secondary:is(:hover, :focus-visible) {
-  background-color: var(--cinnamon-satin);
+  background-color: var(--raisin-black);
   color: var(--white);
 }
 
@@ -334,7 +320,7 @@ body.nav-active { overflow: hidden; }
 
 .contact-link { transition: var(--transition-1); }
 
-.contact-link:is(:hover, :focus-visible) { color: var(--cinnamon-satin); }
+.contact-link:is(:hover, :focus-visible) { color: var(--raisin-black); }
 
 .overlay {
   position: fixed;
@@ -731,7 +717,7 @@ textarea.input-field {
     transition: var(--transition-1);
   }
 
-  .navbar-link:is(:hover, :focus-visible) { color: var(--cinnamon-satin); }
+  .navbar-link:is(:hover, :focus-visible) { color: var(--raisin-black); }
 
   .navbar .social-link {
     color: var(--charcoal);
@@ -898,4 +884,33 @@ textarea.input-field {
 
   .about .grid-list { gap: 60px; }
 
+}
+
+
+
+
+
+
+.context-menu {
+  display: none;
+  position: fixed;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.context-menu li {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background-color: #f0f0f0;
 }
